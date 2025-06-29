@@ -1,0 +1,4 @@
+builds/
+ci-core/__pycache__
+server/node_modules
+server/.env
