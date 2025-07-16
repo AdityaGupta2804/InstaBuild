@@ -33,5 +33,34 @@ router.get('/builds/:id', async (req, res) => {
         res.status(500).json({ message: 'Error fetching build details' });
     }
 });
+router.post('/update-deployment', async (req, res) => {
+    const { buildId, frontendUrl, backendUrl } = req.body;
+
+    if (!buildId) {
+        return res.status(400).json({ error: 'buildId is required' });
+    }
+
+    try {
+        const updatedBuild = await Build.findOneAndUpdate(
+            { buildId },
+            {
+                $set: {
+                    'deploymentUrls.frontend': frontendUrl || null,
+                    'deploymentUrls.backend': backendUrl || null,
+                },
+            },
+            { new: true }
+        );
+
+        if (!updatedBuild) {
+            return res.status(404).json({ message: 'Build not found' });
+        }
+
+        res.status(200).json({ message: 'Deployment URLs updated', data: updatedBuild });
+    } catch (err) {
+        res.status(500).json({ error: 'Server error', details: err.message });
+    }
+});
+
 
 module.exports = router;

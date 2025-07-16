@@ -9,6 +9,14 @@ const buildSchema = new mongoose.Schema({
         type: String,
         default: 'pending',
     },
+    deploymentUrls: {
+        frontend: { type: String, default: null },
+        backend: { type: String, default: null },
+    },
+    tokensUsed: {
+        frontend: { type: String, default: null },
+        backend: { type: String, default: null },
+    },
     createdAt: {
         type: Date,
         default: Date.now,
