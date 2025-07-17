@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* InstaBuild Design System - Professional CI/CD Platform Theme */
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --background: 0 0% 100%;
+    --foreground: 220 13% 18%;
+
+    /* Card & Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 18%;
+
+    /* Primary Brand Colors - Professional Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 217 91% 50%;
+    --primary-light: 217 91% 70%;
+
+    /* Secondary Colors - Complementary */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 13% 18%;
+
+    /* Muted Colors */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    /* Accent Colors - Success Green */
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Status Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    /* Border & Input */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 50%), hsl(142 76% 36%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(220 14% 98%));
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(220 13% 18% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(220 13% 18% / 0.1), 0 2px 4px -1px hsl(220 13% 18% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(220 13% 18% / 0.1), 0 4px 6px -2px hsl(220 13% 18% / 0.05);
+    --shadow-glow: 0 0 20px hsl(217 91% 60% / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.5rem;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 13% 18%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 220 13% 18%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217 91% 60%;
+  }
+
+  .dark {
+    --background: 220 13% 9%;
+    --foreground: 220 14% 96%;
+
+    --card: 220 13% 12%;
+    --card-foreground: 220 14% 96%;
+
+    --popover: 220 13% 12%;
+    --popover-foreground: 220 14% 96%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 217 91% 50%;
+    --primary-light: 217 91% 70%;
+
+    --secondary: 220 13% 15%;
+    --secondary-foreground: 220 14% 96%;
+
+    --muted: 220 13% 15%;
+    --muted-foreground: 220 9% 65%;
+
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 220 13% 18%;
+    --input: 220 13% 18%;
+    --ring: 217 91% 60%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 50%), hsl(142 76% 36%));
+    --gradient-card: linear-gradient(135deg, hsl(220 13% 12%), hsl(220 13% 15%));
+
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -2px hsl(0 0% 0% / 0.05);
+    --shadow-glow: 0 0 20px hsl(217 91% 60% / 0.4);
+
+    --sidebar-background: 220 13% 9%;
+    --sidebar-foreground: 220 14% 96%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 13% 15%;
+    --sidebar-accent-foreground: 220 14% 96%;
+    --sidebar-border: 220 13% 18%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

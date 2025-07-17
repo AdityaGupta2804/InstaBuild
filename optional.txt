@@ -1,0 +1,27 @@
+1. in docker_executor.py we have hardcoded "node:18" which is the type of image we want to use for our test project,-
+    solution -: we can take image type form yaml file ,
+2. In backend/utils/notifier.js we have hardcoded dicord webhook so we need to change that to user input
+3. Also need to add NEW URL button on dashboard to take url from ui rather than postman
+
+
+| Approach       | Pros                           | Cons                                           |
+| -------------- | ------------------------------ | ---------------------------------------------- |
+| **REST API**   | Easier to debug, more control  | Manual packaging of build dir                  |
+| **Vercel CLI** | Quick to set up, very reliable | Requires `vercel` installed, harder to monitor |
+
+https://api.vercel.com/v13/deployments
+
+add a render api or webhook to check weather deployement was success or not in the render 
+
+
+add jwt secret key in ec2 bakend 
+
+⚠️ But You Have a Bug
+In this line:
+
+js
+Copy
+Edit
+if (!fs.readFile(logsPath)) {
+You're using fs.readFile() without awaiting it or using a callback, which is incorrect. This will not check if the file exists.
+
