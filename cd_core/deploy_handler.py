@@ -1,5 +1,3 @@
-# ci-core/deploy_handler.py
-
 import os
 from .vercel import deploy_to_vercel
 from .render import deploy_to_render
