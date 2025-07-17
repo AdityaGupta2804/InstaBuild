@@ -3,6 +3,8 @@ const connectDB = require('./config/db.js');
 const triggerRoute = require('./routes/triggerRoutes.js');
 const buildRoute = require('./routes/buildRoutes.js');
 const cors = require('cors');
+const authRoutes = require('./routes/auth');
+
 
 require('dotenv').config();
 
@@ -12,6 +14,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors());
+app.use('/api/auth', authRoutes);
 // Connect DB
 connectDB();
 
