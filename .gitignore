@@ -1,0 +1,40 @@
+# === General Node.js ===
+node_modules/
+*.log
+.env
+.env.local
+dist/
+build/
+bun.lockb/
+pnpm-debug.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# === Editor & OS Files ===
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# === Frontend Specific ===
+frontend/dist/
+frontend/node_modules/
+frontend/.env
+
+# === Backend Specific ===
+backend/server/node_modules/
+backend/server/.env
+backend/builds/
+backend/ci-core/__pycache__/
+backend/cd_core/__pycache__/
+
+# === Python Cache Files (recursively) ===
+**/__pycache__/
+*.py[cod]
