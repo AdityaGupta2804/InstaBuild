@@ -34,6 +34,10 @@ backend/server/.env
 backend/builds/
 backend/ci-core/__pycache__/
 backend/cd_core/__pycache__/
+# === Python Virtual Environments ===
+venv/
+.venv/
+backend/**/venv/
 
 # === Python Cache Files (recursively) ===
 **/__pycache__/

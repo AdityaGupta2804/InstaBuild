@@ -1,10 +1,12 @@
+
+
 import requests
 import sys
 import os
 from dotenv import load_dotenv
 
 # Load environment variables
-load_dotenv()
+load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '..', 'server', '.env'))
 CI_BACKEND_URL = os.getenv("CI_BACKEND_URL", "http://localhost:5000")
 
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))

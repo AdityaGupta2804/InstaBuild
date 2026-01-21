@@ -1,3 +1,4 @@
 PyYAML
 gitpython
 docker 
+python-dotenv
