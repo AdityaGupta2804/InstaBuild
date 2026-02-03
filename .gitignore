@@ -42,3 +42,5 @@ backend/**/venv/
 # === Python Cache Files (recursively) ===
 **/__pycache__/
 *.py[cod]
+
+*test-repo/
