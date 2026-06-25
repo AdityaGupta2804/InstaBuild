@@ -96,39 +96,62 @@ A[Developer] --> B[React Dashboard]
 
 B --> C[Express API]
 
-C --> D[MongoDB]
+C --> D[Authentication]
 
-C --> E[Repository Manager]
+D --> E[Repository Manager]
 
 E --> F[Clone Git Repository]
 
-F --> G[Read YAML Pipeline]
+F --> G[Detect Repository Type]
 
-G --> H[Docker Build Environment]
+G --> H{Repository Type}
 
-H --> I[Build & Test]
+H -->|Monorepo| I[Select Application]
 
-I --> J[Collect Logs]
+H -->|Multi Repo| J[Use Repository Root]
 
-J --> K[AI Analysis Service]
+I --> K[Read YAML Configuration]
+J --> K
 
-K --> L[LLM API]
+K --> L[Validate YAML]
 
-L --> M[Root Cause Detection]
+L --> M[Generate Pipeline]
 
-I --> N[Vercel Deployment]
+M --> N[Create Docker Container]
 
-I --> O[Render Deployment]
+N --> O[Install Dependencies]
 
-N --> P[Deployment URL]
+O --> P[Run Build Pipeline]
 
-O --> P
+P --> Q[Capture Build Logs]
 
-M --> Q[Discord Notification]
+Q --> R[Deploy to Vercel]
 
-P --> Q
+Q --> S[Deploy to Render]
 
-Q --> A
+R --> T[Deployment URLs]
+S --> T
+
+Q --> U[AI Log Analysis]
+
+U --> V[Clean Logs]
+
+V --> W[Chunk Large Logs]
+
+W --> X[LLM API]
+
+X --> Y[Root Cause Detection]
+
+Y --> Z[Generate Debug Report]
+
+Z --> AA[Discord Notification]
+
+T --> AB[Store Metadata]
+
+AA --> AC[Developer]
+AB --> AC
+
+AB --> AD[(MongoDB)]
 ```
 
 ---
